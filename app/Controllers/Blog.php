@@ -58,7 +58,7 @@ class Blog extends Controller
       }else{
 
 
-      return redirect()->to('/dashboard')->with('success','successfully registered');
+      return redirect()->to('/dashboard')->with('success','successfully posted');
         
       }
 
@@ -78,7 +78,8 @@ class Blog extends Controller
   public function edit($id){
      $blogModel = new BlogModel();
     
-     $data['news'] = $blogModel->find();
+     $data['news'] = $blogModel->find($id);
+
 
   echo view('includes/Adminheader');
   return view('blog/update', $data);
@@ -86,5 +87,49 @@ class Blog extends Controller
 
 
   }
+  public function update($id){
+    $blogModel = new BlogModel();
+    
+     //$data['news'] = $blogModel->find($id);
+       //insert user details to database
+    $validation = $this->validate([
+        'title' => 'required|min_length[3]|max_length[255]',
+        'body' => 'required'
+
+      ]);
+      if (!$validation) {
+      # code...
+      echo view('includes/Adminheader');
+      return view('/blog/createnew', ['validation' =>$this->validator]);
+    }else{
+
+     $data = [
+      'title' => $this->request->getPost('title'),
+      'body'  => $this->request->getPost('body'),
+     ];
+      
+      
+      $blogModel->update($id, $data);
+      return redirect()->to('/dashboard')->with('success','successfully updated');
+        
+      }
+    }
+
+      public function view($id){
+        $blogModel = new BlogModel();
+    
+     $data['news'] = $blogModel->find($id);
+
+
+    echo view('includes/Adminheader');
+     return view('blog/view', $data);
+
+      }
+
+
+
+
+    
+  
 
 }

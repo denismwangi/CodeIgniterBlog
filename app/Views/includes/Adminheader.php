@@ -23,7 +23,7 @@
       </li>
       
     </ul>
-    <button type="button" class="btn btn-outline-success my-2 my-lg-0" type="submit" style="margin-right: 10px" ><a href="/blog/create">create post</a></button>
+    <button type="button" class="btn btn-outline-success my-2 my-lg-0" type="submit" style="margin-right: 10px" ><a href="/">Home</a></button>
     <button type="button" class="btn btn-outline-success my-2 my-lg-0" style="margin-right: 10px" type="submit"><a href="/auth/logout">logout</a></button>
 
   </div>

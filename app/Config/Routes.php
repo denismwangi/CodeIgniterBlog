@@ -33,8 +33,12 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Pages::index');
 $routes->get('/blog/create', 'Blog::create');
 $routes->get('/blog/add', 'Blog::add');
-$routes->get('/blog/delete', 'Blog::delete');
-$routes->get('/blog/update', 'Blog::edit');
+$routes->get('/blog/delete/(:num)', 'Blog::delete/$1');
+$routes->get('/blog/edit/(:num)', 'Blog::edit/$1');
+$routes->get('/blog/update/(:num)', 'Blog::update/$1');
+$routes->get('/blog/view/(:num)', 'Blog::view/$1');
+
+
 
 $routes->get('/auth/logout', 'Auth::logout');
 $routes->get('/dashboard', 'Dashboard::index');
