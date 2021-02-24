@@ -6,7 +6,6 @@
 
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
    <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js" crossorigin="anonymous"></script>
    <link rel="stylesheet" type="text/css" href="<?=  site_url('assets/css/style.css'); ?>">
 
   </head>
@@ -17,7 +16,7 @@
             <!-- Navbar Search-->
             <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
                 <div class="input-group">
-                    <!--<input class="form-control" type="text" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2" /> -->
+                    <input class="form-control" type="text" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2" />
                     <div class="input-group-append">
                         <button class="btn btn-primary" type="button"><i class="fas fa-search"></i></button>
                     </div>
@@ -28,9 +27,10 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-                        <a class="dropdown-item" href="/dashboard/profile">profile</a>
+                        <a class="dropdown-item" href="#">Settings</a>
+                        <a class="dropdown-item" href="#">Activity Log</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="/auth/logout">Logout</a>
+                        <a class="dropdown-item" href="login.html">Logout</a>
                     </div>
                 </li>
             </ul>
@@ -57,7 +57,7 @@
                     </div>
                     <div class="sb-sidenav-footer">
                         <div class="small">Logged in as:</div>
-                        
+                        Start Bootstrap
                     </div>
                 </nav>
             </div>
@@ -70,7 +70,10 @@
                             <li class="breadcrumb-item active">Dashboard</li>
                         </ol>
                         <div class="card mb-4">
-                            
+                            <div class="card-header">
+                                <i class="fas fa-table mr-1"></i>
+                                All posts
+                                <button type="button" class="btn btn-info " type="submit" style="margin-left: 700px; margin-bottom: 10px;" ><a href="/blog/create" style="color: white">create post</a></button><br>
+                            </div>
                             
                        
-    

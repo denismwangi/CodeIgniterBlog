@@ -1,6 +1,7 @@
 <div class="container">
   <h2>Create new post</h2>
   <form action="/blog/create" method="post" autocomplete="off">
+    
     <div class="mb-3">
   <label for="exampleFormControlInput1" class="form-label">Title:</label>
   <input type="text" name="title" class="form-control" id="exampleFormControlInput1" placeholder=" Enter title">

@@ -10,8 +10,10 @@ class Dashboard extends BaseController
 		$model = new BlogModel();
 
         $data['news'] = $model->getPosts();
-        echo view('includes/Adminheader', $data);
-      echo view('dashboard/index');
+       echo view('includes/Adminheader',$data);
+      //echo view('dashboard/dashboard', $data);
+      echo view('dashboard/index', $data);
+      echo view('includes/Adminfooter');
 	}
 	public function profile(){
 		$userModel = new \App\Models\UserModel();
@@ -23,7 +25,7 @@ class Dashboard extends BaseController
 		];
 
 
-        echo view('includes/Adminheader');
+        echo view('includes/Adminheader',$data);
 		return view('dashboard/profile', $data);
 	}
 

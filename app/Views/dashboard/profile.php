@@ -13,7 +13,7 @@
 					<tr>
 						<td><?= $userInfo['name']; ?></td>
 						<td><?= $userInfo['email']; ?></td>
-						<td><a href="<?= site_url('auth/logout') ?>">logout</a></td>
+						
 					</tr>
 				</tbody>
 				

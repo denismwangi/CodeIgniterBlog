@@ -15,7 +15,7 @@ class Blog extends Controller
   $bloModel = new BlogModel();
 
 
-  echo view('includes/header');
+   echo view('includes/Adminheader');
   echo view('blog/createnew');
   echo view('includes/footer');
 }
